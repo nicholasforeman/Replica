@@ -35,6 +35,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Tutorial: tutorial/index.md
   - API: api/index.md
 
 markdown_extensions:
