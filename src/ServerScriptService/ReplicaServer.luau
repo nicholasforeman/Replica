@@ -78,6 +78,8 @@ MAD STUDIO
 		Replica:Unsubscribe(player) -- Destroys Replica for player
 		
 		Replica:Identify() --> [string] -- Debug
+
+		Replica:IsActive() --> [bool]
 		
 		Replica:Destroy() -- Destroys replica and all of its descendants (Depth-first)
 	
@@ -234,6 +236,7 @@ export type Replica = {
 	Subscribe: (self: any, player: Player) -> (),
 	Unsubscribe: (self: any, player: Player) -> (),
 	Identify: (self: any) -> (string),
+	IsActive: (self: any) -> (boolean),
 	Destroy: (self: any) -> (),
 }
 
@@ -843,6 +846,10 @@ function Replica:Identify(): string
 		first_tag = false
 	end
 	return `[Id:{self.Id};Token:{self.Token};Tags:\{{tag_string}\}]`
+end
+
+function Replica:IsActive(): boolean
+	return self.Maid:IsActive()
 end
 
 local function DestroyReplica(replica)

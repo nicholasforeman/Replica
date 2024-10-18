@@ -63,6 +63,8 @@ MAD STUDIO
 		Replica:UFireServer(...) -- Same as "Replica:FireServer()", but using UnreliableRemoteEvent
 		
 		Replica:Identify() --> [string] -- Debug
+
+		Replica:IsActive() --> [bool]
 	
 --]]
 
@@ -168,6 +170,7 @@ export type Replica = {
 	FireServer: (self: any, ...any) -> (),
 	UFireServer: (self: any, ...any) -> (),
 	Identify: (self: any) -> (string),
+	IsActive: (self: any) -> (boolean),
 }
 
 local Connection = {}
@@ -382,6 +385,10 @@ function Replica:Identify(): string
 		first_tag = false
 	end
 	return `[Id:{self.Id};Token:{self.Token};Tags:\{{tag_string}\}]`
+end
+
+function Replica:IsActive(): boolean
+	return self.Maid:IsActive()
 end
 
 function Replica:Set(path: {string}, value: any)
