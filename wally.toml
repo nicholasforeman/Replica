@@ -1,0 +1,12 @@
+[package]
+name = "nicholasforeman/replica"
+description = "Replication library heavily inspired by MadStudioRoblox/ReplicaService on github."
+license = "MIT"
+authors = ["JCL"]
+version = "1.0.0"
+
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+exclude = ["**"]
+include = ["src", "src/*", "default.project.json", "wally.lock", "wally.toml"]
