@@ -1,0 +1,16 @@
+# Roblox Studio files
+/*.rbxlx
+/*.rbxmx
+/*.rbxm
+/*.rbxl
+
+# Wally
+Packages/
+ServerPackages/
+DevPackages/
+wally.lock
+
+# Selene generated file
+roblox.toml
+roblox.yml
+sourcemap.json
