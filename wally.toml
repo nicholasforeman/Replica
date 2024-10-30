@@ -2,7 +2,7 @@
 name = "nicholasforeman/replica"
 description = "Replication library heavily inspired by MadStudioRoblox/ReplicaService on github."
 license = "MIT"
-authors = ["JCL"]
+authors = ["loleris"]
 version = "1.0.0"
 
 registry = "https://github.com/UpliftGames/wally-index"
